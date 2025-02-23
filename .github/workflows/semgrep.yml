@@ -17,6 +17,8 @@ jobs:
     runs-on: ubuntu-20.04
     env:
       SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
+      ACTIONS_RUNNER_DEBUG: true   
+      ACTIONS_STEP_DEBUG: true
     container:
       image: returntocorp/semgrep
     steps:
