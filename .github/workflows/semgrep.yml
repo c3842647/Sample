@@ -39,3 +39,4 @@ jobs:
       run: |
         echo "Environment variables after semgrep scan:"
         env
+        echo "SEMGREP_BASELINE_REF: $SEMGREP_BASELINE_REF"
