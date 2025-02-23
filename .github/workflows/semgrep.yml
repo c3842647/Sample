@@ -21,9 +21,19 @@ jobs:
       image: returntocorp/semgrep
     steps:
     - uses: actions/checkout@v4
+    
+    # Check the environment variables before the scan
+    - name: Print environment variables before scan
+      run: |
+        echo "Environment variables before semgrep scan:"
+        env
+
+    # Run the semgrep ci scan
     - run: |
-        echo "ENV VARIABLES BEFORE SEMGREP SCAN"
-        printenv
         semgrep ci
-        echo "ENV VARIABLES AFTER SEMGREP SCAN"
-        printenv
+
+    # Check the environment variables after the scan
+    - name: Print environment variables after scan
+      run: |
+        echo "Environment variables after semgrep scan:"
+        env
