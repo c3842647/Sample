@@ -3,7 +3,7 @@ on:
   pull_request: {}
   schedule:
   # random HH:MM to avoid a load spike on GitHub Actions at 00:00
-    - cron: '*/5 * * * *'
+    - cron: '20 3 * * *'
 permissions:
   contents: read
 name: Semgrep
