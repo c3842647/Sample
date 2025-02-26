@@ -23,7 +23,7 @@ jobs:
 
     # Run the semgrep ci scan
     - run: |
-        semgrep ci --quiet
+        semgrep ci --verbose
 
     # Check the environment variables after the scan
     - name: Print environment variables after scan
